@@ -298,9 +298,10 @@ body{
     font-size: 1.5rem;
     margin-left: 10rem;
     padding: 10rem;
+    padding-top: 0rem;
     background-color: #222;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:space-around;
 }
 
@@ -312,17 +313,22 @@ body{
 }
 
 .about > .about-content{
-flex:  0 1 37%;
+
 }
 
 .about > .about-content-extra{
-    flex:  1 1 57%;
+  display: flex;
+
     }
 .about-heading{
     font-size: 4rem;
     font-weight: 200;
     letter-spacing: .4rem;
+  
 
+}
+.about-vignett{
+    margin-top: 0rem;
 }
 .small-underline{
    width: 5rem;
@@ -355,6 +361,11 @@ flex:  0 1 37%;
    
  }
 
+
+ .long-underline:hover{
+    width: 22rem;
+ }
+
 .allaboutme-span{
     font-weight: bold;
 }
@@ -365,6 +376,7 @@ flex:  0 1 37%;
 .portfolio{
     margin-left: 10rem;
     padding: 10rem;
+    padding-top: 0rem;
     color: #222;
     display: flex;
     flex-direction: column;
@@ -390,7 +402,7 @@ flex:  0 1 37%;
 }
 
 .portfolio-card{
-    width: 60rem;
+    width: 40rem;
     margin: 5rem;
     box-shadow: 0 3rem 6rem rgba(0,0,0,0.4);
   
@@ -439,6 +451,41 @@ flex:  0 1 37%;
 
  
 /*End of Portfolio*/
+
+/* Skills*/
+.skills{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 10rem;
+    padding: 10rem;
+    padding-top: 0rem;
+    background-color: rgb(92, 91, 91);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+}
+.common-skills-heading {
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: .4rem;
+}
+.skills-list{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between ;
+}
+
+.skills-tag{
+    padding: 1rem;
+    background-color: #222;
+    transition: background-color 0.4s;
+
+}
+
+.skills-tag:hover{
+    background-color: rgb(48, 46, 71);
+}
+/* End of skills */
 
 
 /* Contacts  */
