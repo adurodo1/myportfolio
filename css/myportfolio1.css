@@ -8,7 +8,7 @@ body{
     margin: 0;
     padding: 0;
     color:aliceblue;
-    font-family: 'My Soul', cursive;
+    font-family: 'Montserrat', sans-serif;
    
 
 }
@@ -17,21 +17,22 @@ body{
 /* navbar  */
 /* sidebar  */
 .sidebar{
-    width: 30rem;
+    width: 10rem;
     height: 100%;
     position: fixed;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+  
     justify-content:space-between;
     align-items: center;
+    
     background-color:rgb(48, 46, 71);
+    z-index: 11;
 
 }
 
 .menu-icon{
-    width: 8rem;
-    height: 5rem;
+  
     margin-top: 2rem;
    
 }
@@ -50,11 +51,18 @@ body{
     color:rgb(86, 82, 129);
 }
 
+
 .line{
     height: .2rem;
     width: 2.5rem;
     background-color: #222;
-    margin-bottom: .6rem;
+    margin-bottom:.6rem ;
+    
+}
+
+.line-1 ,.line-3{
+    width: 1.8rem;
+    transition: all .5s ;
 }
 
 
@@ -66,10 +74,8 @@ body{
     color:rgb(29, 29, 46);
     border: 1px solid;
     border-radius: 50%;
-    display:flex ;
-    flex-direction:row;
-    justify-content: space-between;
     text-align: center;
+    margin: auto;
     padding: 2rem;
     transition: all 2s cubic-bezier(1,1,.5,.5);
 
@@ -85,22 +91,26 @@ body{
     height: 9rem;
 }
 
-.myname{
+.navigation-myname{
     font-size: 3rem;
+    text-align: center;
 }
 
 
 .social-icons-ullist{
     list-style-type: none;
-    padding: 0;
+    height: 25rem;
+    padding: 0rem;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:space-evenly;
+    align-items: center;
 }
 
 .social-link{
     font-size: 2rem;
     color: #777;
+    height: 10rem;
     transition: color .3s;
     margin-left: 1rem;
 }
@@ -108,9 +118,25 @@ body{
     color:  aliceblue;
 }
 .navigation{
+    position: fixed;
+    width: 30rem;
+    left:-30rem;
+    height: 100%;
+    background:linear-gradient(to top,rgba(34,32,41,1),rgba(34,32,41,0.8));
+    justify-content: space-between;
+    align-items: center;
+
     display: flex;
     flex-direction:column;
 
+    transition: left .8s cubic-bezier(1,0,0,1);
+  
+
+}
+
+.navigation:hover{
+    z-index: 22;
+    background-color: #fff;
 }
 
 .navigation-list{
@@ -155,6 +181,33 @@ body{
 
 }
 
+
+#click:checked ~ .navigation{
+    left: 10rem;
+
+}
+
+ 
+
+#click:checked ~ .sidebar .line-1{
+    transform:rotate(-405deg) translate(-5px,6px);
+    width: 2.5rem;
+}
+
+#click:checked ~ .sidebar .line-2{
+    opacity: 0;
+}
+
+#click:checked ~ .sidebar .line-3{
+    transform:rotate(405deg) translate(-5px,-6px);
+    width: 2.5rem;
+}
+
+.checkbox{
+    display: none;
+    
+}
+
  
 /* end of navbar  */
 /* end pf sidebar  */
@@ -162,7 +215,7 @@ body{
 
 /* Header*/
 .header{
-    margin-left: 30rem;
+    margin-left:10rem;
     height: 70vh;
     background:linear-gradient(to top,rgba(0,0,0,0.6),rgba(0,0,0,0.5)),url('../img/nav.jpg') no-repeat fixed ;
   
@@ -175,11 +228,13 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: #deaa86;
     font-size: 3.5rem;
-    height: 65rem;
+    height: 45rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+ 
     
 }
 
@@ -241,7 +296,7 @@ body{
 .about{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
-    margin-left: 30rem;
+    margin-left: 10rem;
     padding: 10rem;
     background-color: #222;
     display: flex;
@@ -249,7 +304,12 @@ body{
     justify-content:space-around;
 }
 
+.subheading{
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: .4rem;
 
+}
 
 .about > .about-content{
 flex:  0 1 37%;
@@ -259,6 +319,9 @@ flex:  0 1 37%;
     flex:  1 1 57%;
     }
 .about-heading{
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: .4rem;
 
 }
 .small-underline{
@@ -298,65 +361,81 @@ flex:  0 1 37%;
 /* End of About*/
 
 /* Portfolio*/
-.portfolio{
 
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-    margin-left: 30rem;
-    padding: 1rem;
-    background-color:rgb(198, 198, 204);
+.portfolio{
+    margin-left: 10rem;
+    padding: 10rem;
+    color: #222;
     display: flex;
     flex-direction: column;
-   
-   
+}
+.common-portfolio-header p{
+    font-size: 2rem;
+    font-weight: 200;
+    letter-spacing: .4rem;
 }
 
-.portfolio-wrapper{
+.common-portfolio-heading{
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: .4rem;
 
-   
-    
-    position: relative;
-    display: flex;
-    flex-direction: row;
-  
 }
 
-.portfolio-row {
+.portfolio-card-wrapper{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+}
+
+.portfolio-card{
+    width: 60rem;
+    margin: 5rem;
+    box-shadow: 0 3rem 6rem rgba(0,0,0,0.4);
+  
+}
+.portfolio-card-image{
+    width:inherit;
+    height: inherit;
+}
+
+
+.portfolio-img{
     width: 100%;
-  }
+}
 
+.portfolio-card-content{
+    padding: 2rem;
+}
 
-  .portfolio-column {
+.portfolio-card-header{
+    margin: 0;
+    font-size: 3rem;
+
+}
+.portfolio-card-text{
+    font-size: 1.5rem;
+}
+.portfolio-card-btns-list{
     display: flex;
-    flex-direction: column;
-    flex-basis: 100%;
-    flex: 1;
-  }
-  
-
-
-.portfolio-item{
-    background-color: blue;
-    width: 40rem;
-    height: 20rem;
-    margin: 0.5rem;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin-top: 3rem;
 }
-.portfolio-item .item-1{
- 
+.portfolio-card-btn{
+    width: 15rem;
+    font-weight: 200;
+    font-size: 1.9rem;
+    padding: .5rem;
+    border-radius: .5rem;
+    border: .1rem solid silver;
+    background-color:rgb(48, 46, 71);
     
-}
-.portfolio-item .item-2{
-  
-    
+
+    cursor: pointer;
 }
 
-.portfolio-item .item-3{
- 
-    
-}
 
  
 /*End of Portfolio*/
@@ -367,14 +446,42 @@ flex:  0 1 37%;
 .contacts{
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
-    margin-left: 30rem;
+    margin-left: 10rem;
     padding: 10rem;
     background-color: #222;
+    color:aliceblue;
     display: flex;
     flex-direction: row;
     justify-content:space-around;
 
 }
+
+
+.contacts label {
+    padding-bottom: 0.5rem;
+    color:aliceblue;
+    display: block;
+}
+.contacts input {
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    width: 40rem;
+    background: rgb(240, 240, 240);
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+}
+
+.contacts textarea{
+    margin-bottom: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    width: 40rem;
+    background: rgb(240, 240, 240);
+    font-size: 1rem;
+    border: none;
+    border-radius: 3px;
+}
+
 
 
 /* End of Contacts  */

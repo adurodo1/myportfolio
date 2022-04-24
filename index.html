@@ -18,23 +18,20 @@
  <!--NavBar-->
     <div class="navbar">
         <!--SideBar-->
+        <input type="checkbox" class="checkbox" id="click">
 
         <div class="sidebar">
-            <!-- <div class="menu-icon"> 
+        <label for="click">
+            <div class="menu-icon">
                 <div class="line line-1"></div>
                 <div class="line line-2"></div>
-                <div class="line line-3"></div>
-               
-            </div> -->
-
-           <div class="github">
-               <span>Code</span>
-           </div>
-
-            <div class="avatar">
-                   <img src="img/Abdul.png" class="img" alt="">
+                <div class="line line-3"></div>            
             </div>
-            <div class="myname"> Abdulsaheed Durodola</div>
+        </label>
+
+          
+   
+            
             <ul class="social-icons-ullist">
                 <li>
                     <a href="#" class="social-link">  <i class="fa-brands fa-facebook"></i> </a>
@@ -50,29 +47,43 @@
             </ul>
 
 
+            <div class="year">
+                <p> 2022</p>
+            </div>
+
+
             <!--Navigation-->
 
-            <div class="navigation">
-
-
-                <ul class="navigation-list">
-                <li class="navigation-item"><a href="" class="navigation-link">Home</a></li>
-                <li class="navigation-item"><a href="" class="navigation-link">About</a></li>
-                <li class="navigation-item"><a href="" class="navigation-link">C.V</a></li>
-                <li class="navigation-item"><a href="" class="navigation-link">Projects</a></li>
-                <li class="navigation-item"><a href="" class="navigation-link">Contacts</a></li>
-
-                </ul>
-
-            </div>
-            <div class="copyright">
-                <p>&copy; Abdulsaheed Web</p>
-            </div>
+            
 
 
             <!--End of Navigation-->
         </div>
      <!--End of SideBar-->
+
+     
+     <div class="navigation">
+         <div class="navigation-avatar-and-name">
+        <div class="avatar">
+            <img src="img/Abdul.png" class="img" alt="">
+     </div>
+     <div class="navigation-myname"> Abdulsaheed Durodola</div>
+    </div>
+
+        <ul class="navigation-list">
+        <li class="navigation-item"><a href="" class="navigation-link">Home</a></li>
+        <li class="navigation-item"><a href="" class="navigation-link">About</a></li>
+        <li class="navigation-item"><a href="" class="navigation-link">C.V</a></li>
+        <li class="navigation-item"><a href="" class="navigation-link">Projects</a></li>
+        <li class="navigation-item"><a href="" class="navigation-link">Contacts</a></li>
+
+        </ul>
+        <div class="copyright">
+            <p>&copy; Abduls Web</p>
+        </div>
+       
+
+    </div>
 
      
 
@@ -161,25 +172,47 @@
    <!--Portfolio-->
 
    <section class="portfolio">
-        <div class="portfolio-wrapper">
-             <div class="portfolio-row ">
-                 <div class="portfolio-column">
-             <div class="portfolio-item item-1"></div>
-             <div class="portfolio-item item-2"></div>
-             <div class="portfolio-item item-3"></div>
-                 </div>
-
-            </div>
-            <div class="portfolio-row ">
-                <div class="portfolio-column">
-            <div class="portfolio-item item-1"></div>
-            <div class="portfolio-item item-2"></div>
-            <div class="portfolio-item item-3"></div>
+        <div class="common-portfolio-header">
+                <h3 class="common-portfolio-heading">My Portfolio's</h3>
+                <div class="underline">
+                    <div class="long-underline"></div>
                 </div>
+                <p>Check out my latest projects</p>
+         </div>                
+         <div class="portfolio-card-wrapper">
+                     <!---->
+                     <div class="portfolio-card">
+                           <div class="portfolio-card-image"><img src="img/bcdffull.png" class="portfolio-img" ></div>
+                           <div class="portfolio-card-content">
+                                <div class="portfolio-card-header">BCDF Financial</div>
+                                <div class="portfolio-card-text">A web app that shows bitcoin rate against any currency</div>
+                                <div class="portfolio-card-btns-list">
+                                    <button class="portfolio-card-btn">View Project</button>
+                                    <button class="portfolio-card-btn">View Project</button>
+                                 </div>
+                           </div>
+                     </div>
+                     <!---->
+                       <!---->
+                       <div class="portfolio-card">
+                        <div class="portfolio-card-image"><img src="img/todo.png" class="portfolio-img" ></div>
+                        <div class="portfolio-card-content">
+                             <div class="portfolio-card-header">BCDF Financial</div>
+                             <p class="portfolio-card-text">A web app that shows bitcoin rate against any currency</p>
+                             <div class="portfolio-card-btns-list">
+                                <button class="portfolio-card-btn">View Project</button>
+                             </div>
+                        </div>
+                  </div>
+                  <!---->
+                    <!---->
+      
+                  <!---->
+                       
 
-           </div>
-           
         </div>
+           
+       
 
 
    </section>
@@ -199,10 +232,11 @@
         
            <label for = "email">email: </label> 
            <input type = "text" id = "email"><br> 
+            
+           <label for = "email">Message: </label> 
+           <textarea name="message" id="message" cols="20" rows="20" required="" spellcheck="false"></textarea>
         
-           <input type = "radio" name = "sex" value = "male"> Male<br> 
-           <input type = "radio" name = "sex" value = "female"> Female<br> 
-           <input type = "submit" value = "send"> <input type = "reset"> 
+        
         </p> 
      </form>
     
